@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700&display=swap");
+/* line 2, ../sass/root.scss */
+:root {
+  font-size: 16px;
+  font-family: "Open Sans";
+  --line-secondary: rgba(0, 0, 0, 0.1);
+  --main-bg: #ffffff;
+  --main-text-primary: #33353d;
+  --main-text-secondary: #2d2f38;
+  --nav-text-primary: #b6b6b6;
+  --nav-text-secondary: #ececec;
+  --nav-bg-primary: #23232e;
+  --nav-bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+/* line 21, ../sass/root.scss */
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 29, ../sass/root.scss */
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+/* line 32, ../sass/root.scss */
+body::-webkit-scrollbar-track {
+  background-color: #1e1e24;
+}
+/* line 35, ../sass/root.scss */
+body::-webkit-scrollbar-thumb {
+  background-color: #6649b9;
+}
+
+/* line 40, ../sass/root.scss */
+main {
+  padding: 1rem;
+  margin-left: 5rem;
+}
