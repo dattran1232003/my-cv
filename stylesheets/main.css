@@ -205,7 +205,11 @@ main {
 .nav-item:last-child {
   margin-top: auto;
 }
-/* line 27, ../sass/components/_nav.scss */
+/* line 26, ../sass/components/_nav.scss */
+.nav-item.active {
+  border-left: thick solid var(--main-highlight-color);
+}
+/* line 30, ../sass/components/_nav.scss */
 .nav-link {
   display: flex;
   align-items: center;
@@ -215,39 +219,39 @@ main {
   transition: all 0s;
   filter: grayscale(100%);
 }
-/* line 40, ../sass/components/_nav.scss */
+/* line 43, ../sass/components/_nav.scss */
 .nav-link:hover {
   filter: grayscale(0%);
   color: var(--nav-text-secondary);
   background-color: var(--nav-bg-secondary);
 }
-/* line 46, ../sass/components/_nav.scss */
+/* line 49, ../sass/components/_nav.scss */
 .nav-link svg, .nav-link i {
   min-width: 2rem;
   max-width: 2rem;
   margin: 0 1.5rem;
 }
 
-/* line 55, ../sass/components/_nav.scss */
+/* line 58, ../sass/components/_nav.scss */
 .link-text {
   display: none;
   margin-left: 1rem;
 }
 
-/* line 62, ../sass/components/_nav.scss */
+/* line 65, ../sass/components/_nav.scss */
 .fa-primary {
   color: var(--main-highlight-color);
 }
-/* line 65, ../sass/components/_nav.scss */
+/* line 68, ../sass/components/_nav.scss */
 .fa-secondary {
   color: #305aff;
 }
-/* line 69, ../sass/components/_nav.scss */
+/* line 72, ../sass/components/_nav.scss */
 .fa-primary, .fa-secondary {
   transition: color var(--transition-speed);
 }
 
-/* line 75, ../sass/components/_nav.scss */
+/* line 78, ../sass/components/_nav.scss */
 .logo {
   width: 100%;
   margin-bottom: 1rem;
@@ -256,7 +260,7 @@ main {
   letter-spacing: 0.3ch;
   text-transform: uppercase;
 }
-/* line 84, ../sass/components/_nav.scss */
+/* line 87, ../sass/components/_nav.scss */
 .logo .arrow {
   transform: rotate(0deg);
   transition: transform var(--transition-speed);
@@ -264,35 +268,35 @@ main {
 
 /* Small Screen */
 @media only screen and (max-width: 600px) {
-  /* line 92, ../sass/components/_nav.scss */
+  /* line 95, ../sass/components/_nav.scss */
   .navbar {
     bottom: 0;
     width: 100vw;
     height: 5rem;
   }
-  /* line 98, ../sass/components/_nav.scss */
+  /* line 101, ../sass/components/_nav.scss */
   .navbar-nav {
     flex-direction: row;
   }
 
-  /* line 103, ../sass/components/_nav.scss */
+  /* line 106, ../sass/components/_nav.scss */
   .logo {
     display: none;
   }
 
-  /* line 107, ../sass/components/_nav.scss */
+  /* line 110, ../sass/components/_nav.scss */
   .nav-link {
     justify-content: center;
   }
 
-  /* line 111, ../sass/components/_nav.scss */
+  /* line 114, ../sass/components/_nav.scss */
   main {
     margin: 0;
   }
 }
 /* Large Screen */
 @media only screen and (min-width: 600px) {
-  /* line 118, ../sass/components/_nav.scss */
+  /* line 121, ../sass/components/_nav.scss */
   .navbar {
     top: 0;
     width: 5rem;
@@ -301,30 +305,30 @@ main {
     transition: width 200ms ease;
     border-right: thin solid var(--line-secondary);
   }
-  /* line 128, ../sass/components/_nav.scss */
+  /* line 131, ../sass/components/_nav.scss */
   .navbar:hover {
     width: 16rem;
   }
-  /* line 131, ../sass/components/_nav.scss */
+  /* line 134, ../sass/components/_nav.scss */
   .navbar:hover .link-text {
     display: inline;
   }
-  /* line 134, ../sass/components/_nav.scss */
+  /* line 137, ../sass/components/_nav.scss */
   .navbar:hover .logo svg {
     transform: rotate(-180deg);
   }
 }
-/* line 140, ../sass/components/_nav.scss */
+/* line 143, ../sass/components/_nav.scss */
 .theme-icon {
   display: none;
 }
 
-/* line 144, ../sass/components/_nav.scss */
+/* line 147, ../sass/components/_nav.scss */
 .dark #darkIcon {
   display: block;
 }
 
-/* line 148, ../sass/components/_nav.scss */
+/* line 151, ../sass/components/_nav.scss */
 .light #lightIcon {
   display: block;
 }
@@ -371,15 +375,20 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 44, ../sass/components/_sections.scss */
+  /* line 43, ../sass/components/_sections.scss */
+  h1#fullname {
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* line 48, ../sass/components/_sections.scss */
   .resume-item {
     flex-direction: column;
   }
-  /* line 48, ../sass/components/_sections.scss */
+  /* line 52, ../sass/components/_sections.scss */
   .resume-content {
     width: 100%;
   }
-  /* line 52, ../sass/components/_sections.scss */
+  /* line 56, ../sass/components/_sections.scss */
   .resume-date {
     text-align: left;
     width: 100%;

@@ -40,6 +40,10 @@
 
 // Small screen
 @media only screen and (max-width: 600px) {
+  h1#fullname {
+    margin-bottom: 0.5rem !important;
+  }
+
   .resume {
     &-item {
       flex-direction: column;

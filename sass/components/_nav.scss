@@ -23,6 +23,9 @@
       margin-top: auto;
     }
   }
+  &-item.active {
+    border-left: thick solid var(--main-highlight-color);
+  }
 
   &-link {
     display: flex;
