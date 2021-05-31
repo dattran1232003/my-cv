@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;600;700&display=swap");
+
 :root {
   font-size: 16px;
   font-family: "Open Sans";
 
   --line-secondary: #{rgba(0, 0, 0, 0.1)};
+
+  --main-highlight-color: #305aff;
+  --main-unhighlight-color: #fcdf35;
 
   --main-bg: #ffffff;
   --main-text-primary: #33353d;

@@ -1,5 +1,13 @@
+// inititals
 @import "root";
 
+// Effects
+@import "effects/slideUp";
+
 // components
-@import "components/_nav";
-@import "components/_sections";
+@import "components/list";
+@import "components/icon";
+@import "components/heading";
+
+@import "components/nav";
+@import "components/sections";

@@ -1,5 +1,5 @@
 /* Customize to avoid add id to url bar */
-const anchors = document.getElementsByTagName("a")
+const anchors = document.getElementsByClassName("js-anchorScroll")
 
 const scrollToTarget = (anchor) => (ev) => {
   ev.preventDefault()

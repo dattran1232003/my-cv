@@ -1,3 +1,5 @@
 # Cache and log files
 .sass-cache/
 
+# OS
+.DS_Store

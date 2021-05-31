@@ -4,49 +4,55 @@
   background: var(--main-bg);
 }
 
-.heading {
-  font-family: "Saira Extra Condensed", sans-serif;
-  color: var(--main-text-primary);
-  text-transform: uppercase;
-
-  margin-top: 2rem;
-
-  &--big {
-    font-weight: 500;
-    font-size: 6rem;
-    line-height: 5.5rem;
-    color: var(--main-text-primary);
-  }
-
-  &--no-sub {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-  }
-}
-
-.subheading {
-  margin-top: 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--main-text-secondary);
-  font-family: "Saira Extra Condensed", sans-serif;
-}
-
 .resume-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   min-height: #{calc(100vh - 4rem)};
 
   padding: 2rem 2rem;
   border-bottom: thin solid var(--line-secondary);
 
-  h1#name {
+  h1#fullname {
     margin-bottom: 0;
 
     span {
-      color: #305aff;
+      color: var(--main-highlight-color);
+    }
+  }
+}
+
+.resume {
+  &-item {
+    display: flex;
+    flex-direction: row;
+  }
+  &-content {
+    width: 75%;
+  }
+  &-date {
+    width: 25%;
+    text-align: center;
+    color: var(--main-highlight-color);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .resume {
+    &-item {
+      flex-direction: column;
+    }
+
+    &-content {
+      width: 100%;
+    }
+
+    &-date {
+      text-align: left;
+
+      width: 100%;
+      margin-top: 0.3rem;
     }
   }
 }

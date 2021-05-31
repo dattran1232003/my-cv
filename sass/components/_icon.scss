@@ -1,0 +1,28 @@
+.icon {
+  &__container {
+    display: block;
+
+    padding-left: 0;
+  }
+
+  &__item {
+    list-style: none;
+    font-size: 3rem;
+    &--inline {
+      display: inline;
+    }
+    i {
+      &:hover {
+        color: var(--main-unhighlight-color) !important;
+      }
+    }
+  }
+}
+
+/* Small screen */
+@media all and (max-width: 600px) {
+}
+
+/* Large screen */
+@media all and (min-width: 600px) {
+}
