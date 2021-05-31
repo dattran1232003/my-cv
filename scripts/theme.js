@@ -1,7 +1,6 @@
 const themeMap = Object.freeze({
   dark: "light",
-  light: "solar",
-  solar: "dark",
+  light: "dark",
 })
 
 const theme =

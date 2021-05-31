@@ -27,6 +27,7 @@ $m-bottom: 2rem;
   &--link-inside {
     color: var(--main-highlight-color);
     a {
+      color: var(--main-highlight-color);
       cursor: pointer;
       text-decoration: none;
       &:visited {

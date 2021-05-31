@@ -60,7 +60,7 @@
 
 .fa {
   &-primary {
-    color: #4f73ff;
+    color: var(--main-highlight-color);
   }
   &-secondary {
     color: #305aff;
@@ -92,7 +92,7 @@
   .navbar {
     bottom: 0;
 
-    width: 100vh;
+    width: 100vw;
     height: 5rem;
 
     &-nav {
@@ -124,6 +124,7 @@
     /* Transtions & Effects */
     transition: width 200ms ease;
 
+    border-right: thin solid var(--line-secondary);
     &:hover {
       width: 16rem;
     }
@@ -134,30 +135,6 @@
       transform: rotate(-180deg);
     }
   }
-}
-
-.dark {
-  --nav-text-primary: #b6b6b6;
-  --nav-text-secondary: #ececec;
-
-  --nav-bg-primary: #23232e;
-  --nav-bg-secondary: #141418;
-}
-
-.light {
-  --nav-text-primary: #1f1f1f;
-  --nav-text-secondary: #000000;
-
-  --nav-bg-primary: #ffffff;
-  --nav-bg-secondary: #e4e4e4;
-}
-
-.solar {
-  --nav-text-primary: #576e75;
-  --nav-text-secondary: #35535c;
-
-  --nav-bg-primary: #fdf6e3;
-  --nav-bg-secondary: #f5e5b8;
 }
 
 .theme-icon {

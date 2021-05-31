@@ -43,3 +43,29 @@ main {
   padding: 1rem;
   margin-left: 5rem;
 }
+
+/* line 50, ../sass/root.scss */
+.dark {
+  --nav-text-primary: #b6b6b6;
+  --nav-text-secondary: #ececec;
+  --nav-bg-primary: #1f1f29;
+  --nav-bg-secondary: #141418;
+  --main-bg: #23232e;
+  --main-text-primary: #b6b6b6;
+  --main-text-secondary: #ececec;
+  --main-highlight-color: #30bcd5;
+  --main-unhighlight-color: #fcdf35;
+  --line-secondary: #383842;
+}
+/* line 70, ../sass/root.scss */
+.dark .navbar {
+  border-right: 0;
+}
+
+/* line 75, ../sass/root.scss */
+.light {
+  --nav-text-primary: #1f1f1f;
+  --nav-text-secondary: #000000;
+  --nav-bg-primary: #ffffff;
+  --nav-bg-secondary: #e4e4e4;
+}
