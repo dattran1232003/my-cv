@@ -5,6 +5,13 @@
     padding-left: 0;
   }
 
+  &__container--h {
+    .icon__item {
+      display: inline-block;
+      margin-right: 0.3rem;
+    }
+  }
+
   &__item {
     font-size: 3rem;
     list-style: none;
@@ -16,6 +23,10 @@
         color: var(--main-unhighlight-color) !important;
       }
     }
+  }
+
+  &--dynamic-color {
+    color: var(--main-text-primary);
   }
 }
 

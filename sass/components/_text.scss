@@ -1,0 +1,22 @@
+.text {
+  font-size: 1.2rem;
+  color: var(--main-text-secondary);
+  font-family: "Open Sans", sans-serif;
+
+  &--icon-inside i {
+    display: inline-block;
+
+    width: 1rem;
+    margin-right: 4px;
+  }
+
+  &--group {
+    .text {
+      margin: 0.5rem auto;
+    }
+  }
+
+  &--small {
+    font-size: 1rem;
+  }
+}

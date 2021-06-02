@@ -54,7 +54,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="#basicInfo" class="nav-link js-anchorScroll">
+          <a href="#about" class="nav-link js-anchorScroll">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -71,7 +71,7 @@
                 d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
               ></path>
             </svg>
-            <span class="link-text">Basic Info</span>
+            <span class="link-text">About</span>
           </a>
         </li>
 
@@ -191,15 +191,62 @@
     </nav>
 
     <main class="container">
-      <section class="resume-section slide-up js-slideUp" id="basicInfo">
+      <section class="resume-section slide-up js-slideUp" id="about">
         <h1 class="heading heading--big" id="fullname">
           Trần Quốc <span>Đạt</span>
         </h1>
 
-        <h3 class="subheading">
+        <h3 class="subheading subheading--small">
           <i class="fas fa-id-card"></i>
           · Fresher Web Developer
         </h3>
+
+        <p class="text text--lead" id="greeting">
+          Good <span></span>! How are you doing?
+        </p>
+
+        <span class="text text--group">
+          <p class="text text--icon-inside">
+            <strong>
+              <i class="fab fa-node-js"></i>
+              Back-end:
+            </strong>
+            I experienced with MongoDB, Express, GraphQL, Apollo Server,... I
+            can design, build and maintain web server on NodeJS platform. Use
+            source code management tool like Git.
+          </p>
+
+          <p class="text text--icon-inside">
+            <strong>
+              <i class="fab fa-react"></i>
+              Front-end:
+            </strong>
+            I experieced with basic HTML/CSS/JS, ReactJS,... I can build a
+            responsive UI, design simple UX and deploy my web app.
+          </p>
+        </span>
+
+        <p class="text text--lead">That's all. Thanks and enjoy my CV!</p>
+
+        <ul class="icon icon__container icon__container--h icon--dynamic-color">
+          <li class="icon icon__item">
+            <a
+              class="link link--navicon link--text"
+              href="https://fb.com/datquadeptrai"
+            >
+              <i class="fab fa-facebook"></i
+            ></a>
+          </li>
+
+          <li class="icon icon__item">
+            <a
+              class="link link--navicon link--text"
+              href="https://github.com/dattran1232003"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section class="resume-section slide-up js-slideUp" id="education">
@@ -221,7 +268,27 @@
             </h3>
 
             <ul class="list list__container">
-              <li class="list list__item">abc</li>
+              <li class="list list__item">
+                <p class="text text--small text--icon-inside">
+                  <i class="fas fa-award"></i>
+
+                  thanks to the ability to understand the problems, explain
+                  problems and provide solutions. Besides, I also often help
+                  people. So i was trusted to the classmates to vote as the
+                  class's vice-monitor.
+                </p>
+              </li>
+
+              <li class="list list__item">
+                <p class="text text--small text--icon-inside">
+                  <i class="fas fa-award"></i>
+
+                  thanks to the ability to understand the problems, explain
+                  problems and provide solutions. Besides, I also often help
+                  people. So i was trusted to the classmates to vote as the
+                  class's vice-monitor.
+                </p>
+              </li>
             </ul>
           </div>
 
@@ -302,5 +369,6 @@
     <script src="scripts/theme.js"></script>
     <script src="scripts/scroll.js"></script>
     <script defer src="scripts/slideUp.js"></script>
+    <script defer src="scripts/dynamicTxt.js"></script>
   </body>
 </html>

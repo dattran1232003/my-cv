@@ -58,7 +58,7 @@ main {
   --line-secondary: #383842;
 }
 /* line 70, ../sass/root.scss */
-.dark .navbar {
+.dark .navbar:hover {
   border-right: 0;
 }
 
@@ -95,27 +95,66 @@ main {
   list-style: none;
 }
 
+/* line 2, ../sass/components/_link.scss */
+.link--text {
+  text-decoration: none;
+}
+/* line 4, ../sass/components/_link.scss */
+.link--text:visited {
+  color: inherit;
+}
+
 /* line 2, ../sass/components/_icon.scss */
 .icon__container {
   display: block;
   padding-left: 0;
 }
-/* line 8, ../sass/components/_icon.scss */
+/* line 9, ../sass/components/_icon.scss */
+.icon__container--h .icon__item {
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+/* line 15, ../sass/components/_icon.scss */
 .icon__item {
   font-size: 3rem;
   list-style: none;
 }
-/* line 11, ../sass/components/_icon.scss */
+/* line 18, ../sass/components/_icon.scss */
 .icon__item--inline {
   display: inline;
 }
-/* line 15, ../sass/components/_icon.scss */
+/* line 22, ../sass/components/_icon.scss */
 .icon__item i:hover {
   color: var(--main-unhighlight-color) !important;
+}
+/* line 28, ../sass/components/_icon.scss */
+.icon--dynamic-color {
+  color: var(--main-text-primary);
 }
 
 /* Small screen */
 /* Large screen */
+/* line 1, ../sass/components/_text.scss */
+.text {
+  font-size: 1.2rem;
+  color: var(--main-text-secondary);
+  font-family: "Open Sans", sans-serif;
+}
+/* line 6, ../sass/components/_text.scss */
+.text--icon-inside i {
+  display: inline-block;
+  width: 1rem;
+  margin-right: 4px;
+}
+/* line 14, ../sass/components/_text.scss */
+.text--group .text {
+  margin: 0.5rem auto;
+}
+/* line 19, ../sass/components/_text.scss */
+.text--small {
+  font-size: 1rem;
+}
+
 /* line 3, ../sass/components/_heading.scss */
 .heading {
   text-transform: uppercase;
@@ -168,7 +207,7 @@ main {
   color: var(--main-text-secondary);
   font-family: "Saira Extra Condensed", sans-serif;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 }
 /* line 53, ../sass/components/_heading.scss */
 .subheading--small {
@@ -182,11 +221,11 @@ main {
 
 /* line 1, ../sass/components/_nav.scss */
 .navbar {
+  z-index: 99;
   position: fixed;
   background-color: var(--nav-bg-primary);
-  z-index: 99;
 }
-/* line 6, ../sass/components/_nav.scss */
+/* line 7, ../sass/components/_nav.scss */
 .navbar-nav {
   display: flex;
   align-items: center;
@@ -197,19 +236,23 @@ main {
   height: 100%;
 }
 
-/* line 20, ../sass/components/_nav.scss */
+/* line 21, ../sass/components/_nav.scss */
 .nav-item {
   width: 100%;
 }
-/* line 22, ../sass/components/_nav.scss */
+/* line 23, ../sass/components/_nav.scss */
 .nav-item:last-child {
   margin-top: auto;
 }
-/* line 26, ../sass/components/_nav.scss */
+/* line 27, ../sass/components/_nav.scss */
 .nav-item.active {
   border-left: thick solid var(--main-highlight-color);
 }
-/* line 30, ../sass/components/_nav.scss */
+/* line 28, ../sass/components/_nav.scss */
+.nav-item.active .nav-link {
+  filter: grayscale(0%);
+}
+/* line 34, ../sass/components/_nav.scss */
 .nav-link {
   display: flex;
   align-items: center;
@@ -219,39 +262,39 @@ main {
   transition: all 0s;
   filter: grayscale(100%);
 }
-/* line 43, ../sass/components/_nav.scss */
+/* line 47, ../sass/components/_nav.scss */
 .nav-link:hover {
   filter: grayscale(0%);
   color: var(--nav-text-secondary);
   background-color: var(--nav-bg-secondary);
 }
-/* line 49, ../sass/components/_nav.scss */
+/* line 53, ../sass/components/_nav.scss */
 .nav-link svg, .nav-link i {
   min-width: 2rem;
   max-width: 2rem;
   margin: 0 1.5rem;
 }
 
-/* line 58, ../sass/components/_nav.scss */
+/* line 62, ../sass/components/_nav.scss */
 .link-text {
   display: none;
   margin-left: 1rem;
 }
 
-/* line 65, ../sass/components/_nav.scss */
+/* line 69, ../sass/components/_nav.scss */
 .fa-primary {
   color: var(--main-highlight-color);
 }
-/* line 68, ../sass/components/_nav.scss */
+/* line 72, ../sass/components/_nav.scss */
 .fa-secondary {
   color: #305aff;
 }
-/* line 72, ../sass/components/_nav.scss */
+/* line 76, ../sass/components/_nav.scss */
 .fa-primary, .fa-secondary {
   transition: color var(--transition-speed);
 }
 
-/* line 78, ../sass/components/_nav.scss */
+/* line 82, ../sass/components/_nav.scss */
 .logo {
   width: 100%;
   margin-bottom: 1rem;
@@ -260,7 +303,7 @@ main {
   letter-spacing: 0.3ch;
   text-transform: uppercase;
 }
-/* line 87, ../sass/components/_nav.scss */
+/* line 91, ../sass/components/_nav.scss */
 .logo .arrow {
   transform: rotate(0deg);
   transition: transform var(--transition-speed);
@@ -268,67 +311,73 @@ main {
 
 /* Small Screen */
 @media only screen and (max-width: 600px) {
-  /* line 95, ../sass/components/_nav.scss */
+  /* line 99, ../sass/components/_nav.scss */
   .navbar {
     bottom: 0;
     width: 100vw;
     height: 5rem;
   }
-  /* line 101, ../sass/components/_nav.scss */
+  /* line 105, ../sass/components/_nav.scss */
   .navbar-nav {
     flex-direction: row;
   }
 
-  /* line 106, ../sass/components/_nav.scss */
+  /* line 110, ../sass/components/_nav.scss */
+  .nav-item.active {
+    border-left: 0;
+    border-bottom: thick solid var(--main-highlight-color);
+  }
+
+  /* line 115, ../sass/components/_nav.scss */
   .logo {
     display: none;
   }
 
-  /* line 110, ../sass/components/_nav.scss */
+  /* line 119, ../sass/components/_nav.scss */
   .nav-link {
     justify-content: center;
   }
 
-  /* line 114, ../sass/components/_nav.scss */
+  /* line 123, ../sass/components/_nav.scss */
   main {
     margin: 0;
   }
 }
 /* Large Screen */
 @media only screen and (min-width: 600px) {
-  /* line 121, ../sass/components/_nav.scss */
+  /* line 130, ../sass/components/_nav.scss */
   .navbar {
     top: 0;
     width: 5rem;
     height: 100vh;
     /* Transtions & Effects */
     transition: width 200ms ease;
-    border-right: thin solid var(--line-secondary);
   }
-  /* line 131, ../sass/components/_nav.scss */
+  /* line 139, ../sass/components/_nav.scss */
   .navbar:hover {
+    border-right: thin solid var(--line-secondary);
     width: 16rem;
   }
-  /* line 134, ../sass/components/_nav.scss */
+  /* line 143, ../sass/components/_nav.scss */
   .navbar:hover .link-text {
     display: inline;
   }
-  /* line 137, ../sass/components/_nav.scss */
+  /* line 146, ../sass/components/_nav.scss */
   .navbar:hover .logo svg {
     transform: rotate(-180deg);
   }
 }
-/* line 143, ../sass/components/_nav.scss */
+/* line 152, ../sass/components/_nav.scss */
 .theme-icon {
   display: none;
 }
 
-/* line 147, ../sass/components/_nav.scss */
+/* line 156, ../sass/components/_nav.scss */
 .dark #darkIcon {
   display: block;
 }
 
-/* line 151, ../sass/components/_nav.scss */
+/* line 160, ../sass/components/_nav.scss */
 .light #lightIcon {
   display: block;
 }

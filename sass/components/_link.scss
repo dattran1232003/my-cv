@@ -1,0 +1,8 @@
+.link {
+  &--text {
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+  }
+}

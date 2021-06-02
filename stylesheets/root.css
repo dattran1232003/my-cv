@@ -58,7 +58,7 @@ main {
   --line-secondary: #383842;
 }
 /* line 70, ../sass/root.scss */
-.dark .navbar {
+.dark .navbar:hover {
   border-right: 0;
 }
 
