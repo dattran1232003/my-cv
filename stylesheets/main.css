@@ -102,6 +102,14 @@ main {
 .link--text:visited {
   color: inherit;
 }
+/* line 8, ../sass/components/_link.scss */
+.link--colored {
+  color: var(--main-text-color);
+}
+/* line 12, ../sass/components/_link.scss */
+.link--colored, .link:visited {
+  color: var(--main-text-color);
+}
 
 /* line 2, ../sass/components/_icon.scss */
 .icon__container {

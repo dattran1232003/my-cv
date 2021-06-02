@@ -5,4 +5,12 @@
       color: inherit;
     }
   }
+  &--colored {
+    color: var(--main-text-color);
+  }
+
+  &--colored,
+  &:visited {
+    color: var(--main-text-color);
+  }
 }
