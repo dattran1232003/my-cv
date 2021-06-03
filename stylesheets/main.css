@@ -14,10 +14,11 @@
   --nav-text-secondary: #ececec;
   --nav-bg-primary: #23232e;
   --nav-bg-secondary: #141418;
+  --footer-bg: #333;
   --transition-speed: 600ms;
 }
 
-/* line 26, ../sass/root.scss */
+/* line 29, ../sass/root.scss */
 body {
   color: black;
   background-color: white;
@@ -25,26 +26,26 @@ body {
   padding: 0;
 }
 
-/* line 34, ../sass/root.scss */
+/* line 37, ../sass/root.scss */
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
-/* line 37, ../sass/root.scss */
+/* line 40, ../sass/root.scss */
 body::-webkit-scrollbar-track {
   background-color: #1e1e24;
 }
-/* line 40, ../sass/root.scss */
+/* line 43, ../sass/root.scss */
 body::-webkit-scrollbar-thumb {
   background-color: #6649b9;
 }
 
-/* line 45, ../sass/root.scss */
+/* line 48, ../sass/root.scss */
 main {
   padding: 1rem;
   margin-left: 5rem;
 }
 
-/* line 50, ../sass/root.scss */
+/* line 53, ../sass/root.scss */
 .dark {
   --nav-text-primary: #b6b6b6;
   --nav-text-secondary: #ececec;
@@ -57,17 +58,23 @@ main {
   --main-unhighlight-color: #fcdf35;
   --line-secondary: #383842;
 }
-/* line 70, ../sass/root.scss */
+/* line 73, ../sass/root.scss */
 .dark .navbar:hover {
   border-right: 0;
 }
 
-/* line 75, ../sass/root.scss */
+/* line 78, ../sass/root.scss */
 .light {
   --nav-text-primary: #1f1f1f;
   --nav-text-secondary: #000000;
   --nav-bg-primary: #ffffff;
   --nav-bg-secondary: #e4e4e4;
+}
+
+/* COMMON */
+/* line 88, ../sass/root.scss */
+.d-none {
+  display: none;
 }
 
 /* line 2, ../sass/effects/_slideUp.scss */
@@ -93,22 +100,27 @@ main {
 .list__item {
   list-style: none;
 }
+/* line 8, ../sass/components/_list.scss */
+.list__container--no-p {
+  padding: 0 !important;
+}
 
 /* line 2, ../sass/components/_link.scss */
 .link--text {
   text-decoration: none;
+  color: var(--main-text-color);
 }
-/* line 4, ../sass/components/_link.scss */
+/* line 5, ../sass/components/_link.scss */
 .link--text:visited {
   color: inherit;
 }
-/* line 8, ../sass/components/_link.scss */
+/* line 9, ../sass/components/_link.scss */
 .link--colored {
   color: var(--main-text-color);
 }
-/* line 12, ../sass/components/_link.scss */
-.link--colored, .link:visited {
-  color: var(--main-text-color);
+/* line 13, ../sass/components/_link.scss */
+.link--colored:visited {
+  color: var(--main-highlight-color);
 }
 
 /* line 2, ../sass/components/_icon.scss */
@@ -162,6 +174,95 @@ main {
   font-size: 1rem;
 }
 
+/* line 1, ../sass/components/_popup.scss */
+.popup {
+  max-width: 60vw;
+  max-height: 70vh;
+  top: 10px;
+  position: fixed;
+  left: calc(16rem + 10px);
+  padding: 1rem;
+  background-color: #fff;
+  border: thin double var(--line-secondary);
+  overflow-y: scroll;
+}
+/* line 18, ../sass/components/_popup.scss */
+.popup__content__avatar {
+  margin-right: 1rem;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  background-size: cover;
+  background-position: 50%;
+  background-image: var(--bg);
+}
+/* line 33, ../sass/components/_popup.scss */
+.popup--flex-v {
+  display: flex;
+  flex-direction: row;
+}
+/* line 38, ../sass/components/_popup.scss */
+.popup--flex__item--inline {
+  display: inline-block;
+}
+/* line 44, ../sass/components/_popup.scss */
+.popup__btn-close {
+  font-size: 1.2rem;
+  color: var(--main-text-secondary);
+  cursor: pointer;
+}
+/* line 51, ../sass/components/_popup.scss */
+.popup--fix-tr {
+  top: 2rem;
+  left: auto;
+  right: 2rem;
+  bottom: auto;
+}
+/* line 57, ../sass/components/_popup.scss */
+.popup--fix-br {
+  top: auto;
+  left: auto;
+  right: 2rem;
+  bottom: 2rem;
+}
+/* line 65, ../sass/components/_popup.scss */
+.popup__btn-open {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  background-color: var(--nav-bg-primary);
+  color: var(--main-text-primary);
+}
+/* line 79, ../sass/components/_popup.scss */
+.popup--card {
+  background-color: var(--nav-bg-primary);
+  max-width: 80vw;
+  left: 50%;
+  top: 20%;
+  padding: 1rem 2rem;
+  transform: translate(-50%, -20%);
+  box-shadow: 0 0 20px -10px var(--main-text-primary);
+}
+
+/* Small screen */
+@media screen and (max-width: 600px) {
+  /* line 97, ../sass/components/_popup.scss */
+  .popup--card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* line 103, ../sass/components/_popup.scss */
+  .popup__btn-open {
+    top: 2rem;
+    right: 2rem;
+    left: auto;
+    bottom: auto;
+  }
+}
 /* line 3, ../sass/components/_heading.scss */
 .heading {
   text-transform: uppercase;

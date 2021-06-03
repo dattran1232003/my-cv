@@ -1,6 +1,7 @@
 .link {
   &--text {
     text-decoration: none;
+    color: var(--main-text-color);
     &:visited {
       color: inherit;
     }
@@ -9,8 +10,7 @@
     color: var(--main-text-color);
   }
 
-  &--colored,
-  &:visited {
-    color: var(--main-text-color);
+  &--colored:visited {
+    color: var(--main-highlight-color);
   }
 }

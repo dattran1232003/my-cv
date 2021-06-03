@@ -11,6 +11,7 @@
   --main-unhighlight-color: #fcdf35;
 
   --main-bg: #ffffff;
+
   --main-text-primary: #33353d;
   --main-text-secondary: #2d2f38;
 
@@ -19,6 +20,8 @@
 
   --nav-bg-primary: #23232e;
   --nav-bg-secondary: #141418;
+
+  --footer-bg: #333;
 
   --transition-speed: 600ms;
 }
@@ -78,4 +81,11 @@ main {
 
   --nav-bg-primary: #ffffff;
   --nav-bg-secondary: #e4e4e4;
+}
+
+/* COMMON */
+.d {
+  &-none {
+    display: none;
+  }
 }

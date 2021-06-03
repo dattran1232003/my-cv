@@ -4,4 +4,9 @@
   &__item {
     list-style: none;
   }
+  &__container {
+    &--no-p {
+      padding: 0 !important;
+    }
+  }
 }

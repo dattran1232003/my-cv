@@ -367,7 +367,7 @@
             <p class="text text--small text--icon-inside">
               <i class="fas fa-medal"></i>
 
-              Build a small social app at 2020 -
+              Small social app at 2020 -
               <a
                 class="link link--text link--colored"
                 href="https://blissful-mayer-84c469.netlify.app/"
@@ -378,6 +378,79 @@
         </ul>
       </section>
     </main>
+
+    <div class="popup popup--card d-none" id="basicInfo">
+      <span class="popup__btn-close" title="close">
+        <i class="fas fa-times-circle"></i>
+      </span>
+
+      <div class="popup__header">
+        <h3 class="heading heading--no-sub" style="margin-top: 0">
+          Basic Info
+        </h3>
+      </div>
+
+      <div class="popup__content popup--flex-v">
+        <div class="popup--flex__item--inline">
+          <div
+            class="popup__content__avatar"
+            style="
+              background-image: url(images/profile_image.jpg);
+              margin-top: 3px;
+            "
+          ></div>
+        </div>
+
+        <div class="popup--flex__item">
+          <ul
+            class="list list__container list__container--no-p"
+            style="margin-top: 0"
+          >
+            <li class="list list__item">
+              <p class="text text--small" style="margin-top: 0">
+                <strong> Fullname: </strong>
+                Trần Quốc Đạt
+              </p>
+            </li>
+
+            <li class="list list__item">
+              <p class="text text--small">
+                <strong> Date of Birth: </strong>
+                <span id="date-of-birth">2003/7/22</span>
+                <span id="age"></span>
+              </p>
+            </li>
+
+            <li class="list list__item">
+              <p class="text text--small">
+                <strong> Address: </strong>
+                Nha Be, Ho Chi Minh City.
+              </p>
+            </li>
+
+            <li class="list list__item">
+              <p class="text text--small">
+                <strong> Email: </strong>
+                dattran1232003@gmail.com
+              </p>
+            </li>
+
+            <li class="list list__item">
+              <p class="text text--small">
+                <strong> Phone: </strong>
+                +84 932 936 762
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/dateOfBirth.js"></script>
+
+    <span class="popup popup--fix-br popup__btn-open" target="basicInfo">
+      <i class="fas fa-info"></i>
+    </span>
+    <script src="scripts/basicInfo.js"></script>
 
     <script src="scripts/libs/noframework.waypoints.min.js"></script>
 
