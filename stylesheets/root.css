@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;600;700&display=swap");
 /* line 4, ../sass/root.scss */
 :root {
+  -webkit-print-color-adjust: exact !important;
+  /* Chrome, Safari */
+  color-adjust: exact !important;
+  /*Firefox*/
   font-size: 16px;
   font-family: "Open Sans";
   --line-secondary: rgba(0, 0, 0, 0.1);
@@ -18,7 +22,7 @@
   --transition-speed: 600ms;
 }
 
-/* line 29, ../sass/root.scss */
+/* line 31, ../sass/root.scss */
 body {
   color: black;
   background-color: white;
@@ -26,26 +30,26 @@ body {
   padding: 0;
 }
 
-/* line 37, ../sass/root.scss */
+/* line 39, ../sass/root.scss */
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
-/* line 40, ../sass/root.scss */
+/* line 42, ../sass/root.scss */
 body::-webkit-scrollbar-track {
   background-color: #1e1e24;
 }
-/* line 43, ../sass/root.scss */
+/* line 45, ../sass/root.scss */
 body::-webkit-scrollbar-thumb {
   background-color: #6649b9;
 }
 
-/* line 48, ../sass/root.scss */
+/* line 50, ../sass/root.scss */
 main {
   padding: 1rem;
   margin-left: 5rem;
 }
 
-/* line 53, ../sass/root.scss */
+/* line 55, ../sass/root.scss */
 .dark {
   --nav-text-primary: #b6b6b6;
   --nav-text-secondary: #ececec;
@@ -58,12 +62,12 @@ main {
   --main-unhighlight-color: #fcdf35;
   --line-secondary: #383842;
 }
-/* line 73, ../sass/root.scss */
+/* line 75, ../sass/root.scss */
 .dark .navbar:hover {
   border-right: 0;
 }
 
-/* line 78, ../sass/root.scss */
+/* line 80, ../sass/root.scss */
 .light {
   --nav-text-primary: #1f1f1f;
   --nav-text-secondary: #000000;
@@ -72,7 +76,31 @@ main {
 }
 
 /* COMMON */
-/* line 88, ../sass/root.scss */
+/* line 90, ../sass/root.scss */
 .d-none {
   display: none;
+}
+
+@media only print {
+  /* line 96, ../sass/root.scss */
+  nav {
+    display: none !important;
+  }
+
+  /* line 100, ../sass/root.scss */
+  #basicInfo.d-none {
+    display: block !important;
+    position: initial;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* line 112, ../sass/root.scss */
+  .popup__btn-open {
+    display: none !important;
+  }
 }

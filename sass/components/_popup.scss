@@ -72,18 +72,18 @@
     text-align: center;
     line-height: 1rem;
 
-    background-color: var(--nav-bg-primary);
-    color: var(--main-text-primary);
+    background-color: var(--main-text-secondary);
+    color: var(--main-bg);
 
     border: none;
 
-    box-shadow: 0 0 20px -10px var(--main-text-primary);
+    // box-shadow: 0 0 20px -10px var(--main-text-primary);
   }
 
   &--card {
     border: none;
-    background-color: var(--nav-bg-primary);
     max-width: 80vw;
+    background-color: var(--nav-bg-primary);
 
     left: 50%;
     top: 20%;
