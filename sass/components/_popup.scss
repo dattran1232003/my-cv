@@ -47,24 +47,14 @@
     cursor: pointer;
   }
 
-  &--fix {
-    &-tr {
-      top: 2rem;
-      left: auto;
-      right: 2rem;
-      bottom: auto;
-    }
-    &-br {
-      top: auto;
-      left: auto;
-      right: 2rem;
-      bottom: 2rem;
-    }
-  }
-
   &__btn-open {
     cursor: pointer;
     border-radius: 50%;
+
+    top: auto;
+    left: auto;
+    right: 2rem;
+    bottom: 2rem;
 
     width: 1rem;
     height: 1rem;
@@ -72,10 +62,25 @@
     text-align: center;
     line-height: 1rem;
 
-    background-color: var(--main-text-secondary);
     color: var(--main-bg);
+    background-color: var(--main-text-secondary);
 
     border: none;
+
+    &__describe {
+      padding: 0.5rem;
+
+      display: block;
+      position: fixed;
+      background-color: var(--nav-text-secondary);
+
+      border-radius: 5px;
+
+      right: 5.5rem;
+      bottom: 2.5rem;
+
+      transition: transform 2s;
+    }
 
     // box-shadow: 0 0 20px -10px var(--main-text-primary);
   }
@@ -110,6 +115,12 @@
       right: 2rem;
       left: auto;
       bottom: auto;
+
+      &__describe {
+        right: 5.5rem;
+        top: 2.5rem;
+        bottom: auto;
+      }
     }
   }
 }

@@ -113,3 +113,11 @@ main {
     display: none !important;
   }
 }
+
+.d-none {
+  display: none !important;
+}
+
+.slide-right {
+  transform: translateX(calc(100% + 500px));
+}

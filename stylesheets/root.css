@@ -104,3 +104,12 @@ main {
     display: none !important;
   }
 }
+/* line 117, ../sass/root.scss */
+.d-none {
+  display: none !important;
+}
+
+/* line 121, ../sass/root.scss */
+.slide-right {
+  transform: translateX(calc(100% + 500px));
+}

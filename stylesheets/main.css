@@ -104,6 +104,16 @@ main {
     display: none !important;
   }
 }
+/* line 117, ../sass/root.scss */
+.d-none {
+  display: none !important;
+}
+
+/* line 121, ../sass/root.scss */
+.slide-right {
+  transform: translateX(calc(100% + 500px));
+}
+
 /* line 2, ../sass/effects/_slideUp.scss */
 .slide-up > * {
   opacity: 0;
@@ -238,33 +248,34 @@ main {
   color: var(--main-text-secondary);
   cursor: pointer;
 }
-/* line 51, ../sass/components/_popup.scss */
-.popup--fix-tr {
-  top: 2rem;
-  left: auto;
-  right: 2rem;
-  bottom: auto;
-}
-/* line 57, ../sass/components/_popup.scss */
-.popup--fix-br {
+/* line 50, ../sass/components/_popup.scss */
+.popup__btn-open {
+  cursor: pointer;
+  border-radius: 50%;
   top: auto;
   left: auto;
   right: 2rem;
   bottom: 2rem;
-}
-/* line 65, ../sass/components/_popup.scss */
-.popup__btn-open {
-  cursor: pointer;
-  border-radius: 50%;
   width: 1rem;
   height: 1rem;
   text-align: center;
   line-height: 1rem;
-  background-color: var(--main-text-secondary);
   color: var(--main-bg);
+  background-color: var(--main-text-secondary);
   border: none;
 }
-/* line 83, ../sass/components/_popup.scss */
+/* line 70, ../sass/components/_popup.scss */
+.popup__btn-open__describe {
+  padding: 0.5rem;
+  display: block;
+  position: fixed;
+  background-color: var(--nav-text-secondary);
+  border-radius: 5px;
+  right: 5.5rem;
+  bottom: 2.5rem;
+  transition: transform 2s;
+}
+/* line 88, ../sass/components/_popup.scss */
 .popup--card {
   border: none;
   max-width: 80vw;
@@ -278,17 +289,23 @@ main {
 
 /* Small screen */
 @media screen and (max-width: 600px) {
-  /* line 102, ../sass/components/_popup.scss */
+  /* line 107, ../sass/components/_popup.scss */
   .popup--card {
     left: 50%;
     top: 40%;
     transform: translate(-50%, -40%);
   }
-  /* line 108, ../sass/components/_popup.scss */
+  /* line 113, ../sass/components/_popup.scss */
   .popup__btn-open {
     top: 2rem;
     right: 2rem;
     left: auto;
+    bottom: auto;
+  }
+  /* line 119, ../sass/components/_popup.scss */
+  .popup__btn-open__describe {
+    right: 5.5rem;
+    top: 2.5rem;
     bottom: auto;
   }
 }
