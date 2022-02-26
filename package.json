@@ -1,0 +1,27 @@
+{
+  "name": "my-cv",
+  "version": "1.0.0",
+  "description": "This is my static-web CV.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass:stylesheets",
+    "serve": "light-server -c .lightrc.json",
+    "start": "concurrently \"yarn sass\" \"yarn serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dattran1232003/my-cv.git"
+  },
+  "author": "dattran1232003@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dattran1232003/my-cv/issues"
+  },
+  "homepage": "https://github.com/dattran1232003/my-cv#readme",
+  "dependencies": {
+    "light-server": "^2.9.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

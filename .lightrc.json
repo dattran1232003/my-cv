@@ -1,0 +1,14 @@
+{
+  "serve": ".",
+  "serveRedirect": false,
+  "port": 4000,
+  "bind": "localhost",
+  "watchexps": ["**.js", "stylesheets/main.css", "*.html"],
+  "interval": 500,
+  "delay": 0,
+  "noReload": false,
+  "quiet": false,
+  "open": true,
+  "http2": false,
+  "historyindex": "/index.html"
+}
